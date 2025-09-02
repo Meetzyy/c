@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    char m[]="abcdefghijklmnopqrstuvwxyz";
+
+    int i = 0; 
+
+    do
+    {
+        printf("%c",m[i]);
+        i=i+4;
+    }while( i < 26);
+}
+
+
+#include <stdio.h>
+void main()
+{
+    int number, count=0;
+    
+    printf("Enter a number : ");
+    scanf("%d", &number);
+    
+    if(number == 0)
+    {
+        count = 1;
+        printf("%d",count);
+    }
+    else
+    {
+        if (number < 0)
+        {
+            number = -number;
+        }
+        
+        do
+        {
+            number /= 10;
+            count++;
+        }
+        while(number>0);
+        
+    }
+    printf("%d",count);
+    
+}
+
+
+#include<stdio.h>
+void main()
+{
+    int first_number;
+    int last_number;
+    int number;
+    int sum;
+
+    printf("Enter A Number");
+    scanf("%d",&number);
+
+    last_number = number % 10;
+    first_number = number;
+    do 
+    {
+        first_number = first_number /10;
+    }
+    while(first_number >=10);
+    
+    sum  = first_number + last_number;
+    printf("the sum is :  %d",sum);
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int marks;
+    printf("Enter total marks: ");
+    scanf("%d", &marks);
+    int grade = marks/10;
+
+    switch (grade)
+    {
+    case (10):
+        printf("A aa gaya bhai woohoo");
+        break;
+    case (9):
+        printf("A aa gaya bhai woohoo");
+        break;
+    case (8):
+        printf("B aaya hai, nice nice!");
+        break;
+    case (7):
+        printf("C aaya hai, thodi aur mehnat ki zarurat hai!");
+        break;
+    default:
+        printf("bhai tu chhod de padhai, majdoori shuru kar de!");
+        break;
+    }   
+}

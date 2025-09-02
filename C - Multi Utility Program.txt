@@ -1,0 +1,86 @@
+1. temperature converter 
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int c,f;
+    printf("Enter kar C");
+    scanf("%d",&c);
+
+    f = (9*c)/5 + 32;
+    printf("Equivalent Fahrenheit: %d",f);
+}
+
+
+2. gross salary calculator
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int salary = 10000;
+    int total_percent = 23;
+    int result = salary * total_percent / 100;
+    int new_salary = salary + result;
+    printf("New salary: %d", new_salary);
+}
+
+
+3. 3rd angle value of right triangle 
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int total = 180;
+    int a,b,c;
+    printf("Enter the values of 1st angle value:");
+    scanf("%d",&a);
+    printf("Enter the values of 2nd angle value:");
+    scanf("%d",&b);
+    c = total - a - b;
+    printf("The 3rd angle value is:%d",c);
+}
+
+
+4. (x+y)square
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int x, y;
+    printf("Enter x: ");
+    scanf("%d", &x);
+    printf("Enter y: ");
+    scanf("%d", &y);
+    int result = (x * x) + (2 * x * y) + (y * y);
+    printf("%d",result);
+}
+
+
+5. (x-y)square
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int x, y;
+    printf("Enter x: ");
+    scanf("%d", &x);
+    printf("Enter y: ");
+    scanf("%d", &y);
+    int result = (x * x) - (2 * x * y) + (y * y);
+    printf("%d",result);
+}
+
+
+6. 4. (x+y)cube
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int x, y;
+    printf("Enter x: ");
+    scanf("%d", &x);
+    printf("Enter y: ");
+    scanf("%d", &y);
+    int result = (x * x * x) + (3 * x * x *y) + (3 * x * y *y) - (y * y * y);
+    printf("%d",result);
+}
