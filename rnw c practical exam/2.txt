@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define MAX_LEN 1000
+
+int is_consonant(char ch)
+{
+    ch = tolower(ch);
+    
+    return (ch >= 'a' && ch <= 'z') &&
+           (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u');
+}
+
+void count_consonants(char str[])
+{
+    int counts[26] = {0};
+
+    for (int i = 0; str[i] != '\0'; i++) 
+    {
+        char ch = tolower(str[i]);
+
+        if (is_consonant(ch))
+        {
+            counts[ch - 'a']++;
+        }
+    }
+
+    printf("\nConsonant occurrences:\n");
+    for (int i = 0; i < 26; i++)
+    {
+        char ch = 'a' + i;
+        
+        if (is_consonant(ch) && counts[i] > 0) 
+        {
+            printf("%c: %d\n", ch, counts[i]);
+        }
+    }
+}
+
+int main() {
+    char sentence[MAX_LEN];
+
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    sentence[strcspn(sentence, "\n")] = '\0';
+
+    count_consonants(sentence);
+
+    return 0;
+}

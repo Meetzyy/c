@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void main()
+{
+    int num;
+    int first_digit;
+    int last_digit;
+    int sum;
+    
+    printf("Enter a 3-digit positive integer: ");
+    scanf("%d", &num);
+    
+    first_digit = num / 100;
+    last_digit = num % 10;
+    
+    sum = first_digit + last_digit;
+    
+    printf("Sum of the first and last digits: %d\n", sum);
+}
